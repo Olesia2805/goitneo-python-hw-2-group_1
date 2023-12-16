@@ -33,7 +33,7 @@ def change_contact(args, contacts):
     """this change-function has to have 2 args (name and phone (int number))
 which it will use for changing the user's phone to the list"""
     if len(args) < 2:
-        raise ValueError("Please provide both name and phone.")
+        raise ValueError("Please provide both name and phone")
     
     name, phone = args
     
@@ -66,7 +66,7 @@ def show_all(contacts):
         for name, phone in contacts.items():
             return "\n".join([f"{name}: {phone}"])
     else:
-        raise ValueError ("No contacts available.")
+        raise ValueError ("No contacts available")
 
 def main():
     """main function where everything happening"""
@@ -103,7 +103,7 @@ def main():
         elif command == "all":
             print(show_all(contacts))
         else:
-            print("Invalid command.")
+            print("Invalid command")
 
 if __name__ == "__main__":
     main()
